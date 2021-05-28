@@ -1,0 +1,29 @@
+trainingInput:
+  scaleTier: BASIC
+  hyperparameters:
+    goal: MINIMIZE
+    maxTrials: 10 # TODO: Your code goes here
+    maxParallelTrials: 2 # TODO: Your code goes here
+    hyperparameterMetricTag: rmse # TODO: Your code goes here
+    enableTrialEarlyStopping: True
+    params:
+    - parameterName: lr
+      type: DOUBLE
+      minValue: 0.0001
+      maxValue: 0.1
+      scaleType: UNIT_LOG_SCALE
+      # TODO: Your code goes here
+    - parameterName: nbuckets
+      type: INTEGER
+      minValue: 10
+      maxValue: 25
+      scaleType: UNIT_LINEAR_SCALE
+      # TODO: Your code goes here
+    - parameterName: batch_size
+      type: DISCRETE
+      discreteValues:
+      - 30
+      - 50
+      - 80
+      # TODO: Your code goes here
+        
